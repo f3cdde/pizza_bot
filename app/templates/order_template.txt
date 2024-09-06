@@ -1,0 +1,6 @@
+Olá {customer_name},
+
+Seu pedido de {quantity} pizza(s) {pizza_type} foi recebido com sucesso!
+Endereço de entrega: {address}
+
+Obrigado por escolher nossa pizzaria!

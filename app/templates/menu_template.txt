@@ -1,0 +1,7 @@
+Olá,
+
+Aqui está nosso menu:
+
+{menu_items}
+
+Obrigado por escolher nossa pizzaria!
