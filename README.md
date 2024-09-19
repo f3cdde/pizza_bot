@@ -31,7 +31,6 @@ pizza_bot/
 ├── .gitignore
 └── README.md
 
-
 ## Dependências
 
 - Flask
@@ -89,22 +88,30 @@ pizza_bot/
 ## Passos para Configurar o Twilio com WhatsApp
 1. Crie uma Conta no Twilio:
    Se você ainda não tem uma conta no Twilio, crie uma em twilio.com.
-2. Configure um Sandbox do WhatsApp no Twilio:
+   
+3. Configure um Sandbox do WhatsApp no Twilio:
    No painel do Twilio, vá para a seção Messaging e selecione Try it out > Send a WhatsApp message.
    Siga as instruções para configurar o sandbox do WhatsApp. Você precisará enviar uma mensagem de verificação para um número de telefone fornecido pelo Twilio para ativar o sandbox.
-3. Obtenha as Credenciais do Twilio:
+   
+5. Obtenha as Credenciais do Twilio:
    No painel do Twilio, vá para a seção Account e copie o Account SID e o Auth Token. Esses valores serão usados no arquivo .env.
-4. Atualize o Arquivo .env:
+   
+7. Atualize o Arquivo .env:
    Certifique-se de que o arquivo .env contém as seguintes variáveis de ambiente com os valores corretos:
    TWILIO_ACCOUNT_SID=seu_twilio_account_sid
    TWILIO_AUTH_TOKEN=seu_twilio_auth_token
    TWILIO_PHONE_NUMBER=seu_twilio_phone_number
    PIZZERIA_PHONE_NUMBER=seu_pizzeria_phone_number
-5. Atualize o Código do Servidor Flask:
-   Certifique-se de que o código do servidor Flask está configurado para lidar com mensagens do WhatsApp. O código já deve estar configurado corretamente com as funções send_message e send_media no arquivo whatsapp_utils.py.
-6. Configure o Webhook no Twilio:
-   No painel do Twilio, vá para a seção Messaging e selecione WhatsApp Sandbox.
-   Na seção Sandbox Configuration, configure o Webhook URL para apontar para o endpoint /webhook do seu servidor Flask. Por exemplo, se você estiver executando o servidor localmente, use http://localhost:5000/webhook.
-7. Teste o Bot:
-   Envie uma mensagem para o número do sandbox do WhatsApp que você configurou no Twilio.
-   O bot deve responder de acordo com as mensagens definidas no código do servidor Flask.
+   
+9. Atualize o Código do Servidor Flask:
+   Certifique-se de que o código do servidor Flask está configurado para lidar com mensagens do WhatsApp.
+
+10. O código já deve estar configurado corretamente com as funções send_message e send_media no arquivo whatsapp_utils.py.
+   
+11. Configure o Webhook no Twilio:
+    No painel do Twilio, vá para a seção Messaging e selecione WhatsApp Sandbox.
+    Na seção Sandbox Configuration, configure o Webhook URL para apontar para o endpoint /webhook do seu servidor Flask. Por exemplo, se você estiver executando o servidor localmente, use http://localhost:5000/webhook.
+
+13. Teste o Bot:
+    Envie uma mensagem para o número do sandbox do WhatsApp que você configurou no Twilio.
+    O bot deve responder de acordo com as mensagens definidas no código do servidor Flask.
